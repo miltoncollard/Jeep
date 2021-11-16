@@ -1,0 +1,37 @@
+.models__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0 30px 0 ;
+}
+
+.content__text{
+    width: 75%;
+    margin-right: 10%;
+    margin-left: 10%;
+    }
+.content__text h2{
+    font: normal normal bold 60px/72px Helvetica;    
+    letter-spacing: 0.6px;
+    text-align: left;
+
+}    
+.content__text p{
+    text-align: left;
+    font: normal normal normal 20px/40px Helvetica;
+    letter-spacing: 0.2px;
+    color: #39383C;
+}    
+
+
+.content__images{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    grid-gap: 0;
+    width: 25%;
+    margin: auto;
+}
+.content__images img{
+    width: 100px;
+}

@@ -1,0 +1,43 @@
+.faq-section{
+    background: #DEDEDE 0% 0% no-repeat padding-box;
+    padding: 50px 0;
+}
+.faq-section h1{
+    font: normal normal bold 73px Helvetica;
+    letter-spacing: 0.61px;    
+    padding: 0;
+    margin: 0;
+}
+.faq-section h2{
+    font: normal normal bold 23px Helvetica;
+    letter-spacing: 0px;
+    padding: 20px;
+    margin: 10px;
+    color: rgb(104, 104, 104);
+}
+
+.faq-content{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.faq-content ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 40px;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    
+}
+
+.faq-content ul li{
+    font: normal normal normal 20px Helvetica;
+    letter-spacing: 0px;
+}
+
+.faq-content ul li::marker{
+    color: rgb(88, 88, 88);
+    font-size: 35px;
+}
