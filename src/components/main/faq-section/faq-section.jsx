@@ -4,7 +4,7 @@ const FaqSection = () => {
     return ( 
         <div className="faq-section">
             <h1>Preguntas frecuentes</h1>
-            <h2>Por las siguientes consulta u otras, no dudes en contactarnos</h2>
+            <h2>Por las siguientes consultas u otras, no dudes en contactarnos</h2>
             <div className="faq-content">
                 <ul>
                     <li>¿Qué es y qué trámite debo realizar para licitar?</li>

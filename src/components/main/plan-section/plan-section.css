@@ -52,3 +52,42 @@
     color: rgb(88, 88, 88);
     font-size: 30px;
 }
+
+@media only screen and (max-width:1200px){
+
+    .planSection .plan-content{
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .planSection .text-plan{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .planSection .text-plan p{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .planSection .advantage{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .planSection .advantage ul{
+        text-align: center;
+        margin: 0 auto;
+        width: 70%;
+        font-size: 20px;
+    }
+
+    .planSection .advantage ul li{
+        text-align: left;
+        margin-left: 15px;
+    }
+}

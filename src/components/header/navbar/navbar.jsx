@@ -3,32 +3,50 @@ import './navbar.css';
 //assets
 import logo from '../../../assets/images/jeep-logo.png';
 import whatsapp from '../../../assets/images/whatsapp_icon.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 const NavBar = () => {
-  return ( 
-    <nav className="nav container">
-        <div className="nav__logo">
-            <a href="/Jeep"> <img src={logo} alt=""/> </a>
-        </div>
-        <div className="nav__menu">
-            <ul className="nav__list">
-                <li className="nav__item">
-                   <a href="#planSection" className="nav__link">¿POR QUÉ JEEP PLAN?</a>
-                </li>
-                <li className="nav__item">
-                    <a href="#compass" className="nav__link">JEEP COMPASS</a>
-                </li>
-                <li className="nav__item">
-                    <a href="#renegade" className="nav__link">RENEGADE SPORT</a>
-                </li>
-                <li className="nav__item">
-                    <a href="#contact" className="nav__link">CONTACTO</a>
-                </li>
-                <a href="#contact" className="nav__link"><img src={whatsapp} alt="" /></a>
-            </ul>
-        </div>
-    </nav>
-  );
+
+    const [isMobile, setIsMobile] = useState(true);
+    console.log("isMobile: ", isMobile)
+    return ( 
+        <nav className="nav container">
+            <div className="nav__logo">
+                <a href="/Jeep"> <img src={logo} alt=""/> </a>
+            </div>
+            <div className="nav__menu">
+                <ul 
+                    className={isMobile? "nav__list" : "nav__list__mobile"}
+                    onClick={() => setIsMobile(false)}
+                >
+                    <li className="nav__item">
+                    <a href="#planSection" className="nav__link">¿POR QUÉ JEEP PLAN?</a>
+                    </li>
+                    <li className="nav__item">
+                        <a href="#compass" className="nav__link">JEEP COMPASS</a>
+                    </li>
+                    <li className="nav__item">
+                        <a href="#renegade" className="nav__link">RENEGADE SPORT</a>
+                    </li>
+                    <li className="nav__item">
+                        <a href="#contact" className="nav__link">CONTACTO</a>
+                    </li>
+                    <a href="#contact" className="nav__link"><img src={whatsapp} alt="" /></a>
+                </ul>
+            </div>
+            <button className="mobile-menu"
+                onClick={() => setIsMobile(!isMobile)}
+            >
+                {isMobile ?(
+                    <i className="fas fa-bars"><FontAwesomeIcon icon={faBars}/></i>
+                    ) : (
+                    <i className="fas fa-times"><FontAwesomeIcon icon={faTimes}/></i>
+                    )}
+            </button>
+        </nav>
+    );
 }
 
 export default NavBar;

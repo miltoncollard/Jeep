@@ -85,3 +85,30 @@
     font-size: 25px;
     font-weight: bold;
 }
+
+@media only screen and (max-width:1200px){
+    .contact-section h1{
+        font: normal normal bold 50px Helvetica;
+    }
+
+    .contact__form{
+        display: block;
+        width: 100%;
+    }
+
+    .contact__form .name,
+    .contact__form .email,
+    .contact__form .phone,
+    .contact__form .message{
+        width: 75%;
+        margin: 5px 5px 5px 0px;
+    }
+
+    .contact__form .message{
+        padding-bottom: 50px;
+    }
+
+    .contact__form .btn-send{
+        padding: 15px 50px;
+    }
+}

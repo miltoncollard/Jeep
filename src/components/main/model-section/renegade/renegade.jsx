@@ -21,7 +21,7 @@ const ModelSection = () => {
                          transmisión manual de 6 velocidades, llantas de aleación de 17'', 
                          sistemas Uconnect de 7'', táctil con cámara de retroceso, 
                          Climatizador automático Bi-zona, control de velocidad crucero, 
-                         sensores de estacionamiento trasero y mucho más
+                         sensores de estacionamiento trasero y mucho más.
                          </p>
                 </div>
                 <div className="content__images">

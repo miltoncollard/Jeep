@@ -61,3 +61,47 @@
     grid-column-start: 2;
     grid-column-end: 2;
 }
+
+@media only screen and (max-width:1200px){
+    
+    #compass{
+        width: 100%;
+        display: block;
+    }
+
+    #compass img{
+        overflow: hidden;
+    }
+
+    .models__content{
+        display: block;
+    }
+    .content__text{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .content__text h2{
+        width: 85%;
+        font: normal normal bold 30px Helvetica;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .content__text p{
+        width: 85%;
+        font: normal normal normal 20px Helvetica;
+        text-align: left;
+        margin: 20px auto;
+        letter-spacing: 2px;
+    }
+
+    .models__content .content__images{
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+}

@@ -41,3 +41,44 @@
     letter-spacing: 0px;
     color: #FAFAFA;
 }
+
+
+@media only screen and (max-width:1200px){
+
+    .footer{
+        height: 400px;
+    }
+
+    .group1{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px 0px;
+    }
+
+    .group1 .group1-logo{
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .group1 .group1-link{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .group1 .group1-link a {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        padding: 20px 0px;
+    }
+
+    .group2{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px 0px;
+    }
+}
