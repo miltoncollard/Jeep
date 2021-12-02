@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Jeep/static/css/main.5ff0b3b6.chunk.css",
-    "main.js": "/Jeep/static/js/main.56bb41ab.chunk.js",
-    "main.js.map": "/Jeep/static/js/main.56bb41ab.chunk.js.map",
-    "runtime-main.js": "/Jeep/static/js/runtime-main.3b092299.js",
-    "runtime-main.js.map": "/Jeep/static/js/runtime-main.3b092299.js.map",
+    "main.css": "/Jeep/static/css/main.1f482af4.chunk.css",
+    "main.js": "/Jeep/static/js/main.2b63a708.chunk.js",
+    "main.js.map": "/Jeep/static/js/main.2b63a708.chunk.js.map",
+    "runtime-main.js": "/Jeep/static/js/runtime-main.4f12e018.js",
+    "runtime-main.js.map": "/Jeep/static/js/runtime-main.4f12e018.js.map",
     "static/css/2.4ce9e501.chunk.css": "/Jeep/static/css/2.4ce9e501.chunk.css",
-    "static/js/2.146441fa.chunk.js": "/Jeep/static/js/2.146441fa.chunk.js",
-    "static/js/2.146441fa.chunk.js.map": "/Jeep/static/js/2.146441fa.chunk.js.map",
-    "static/js/3.386cf129.chunk.js": "/Jeep/static/js/3.386cf129.chunk.js",
-    "static/js/3.386cf129.chunk.js.map": "/Jeep/static/js/3.386cf129.chunk.js.map",
+    "static/js/2.b8b8b4d8.chunk.js": "/Jeep/static/js/2.b8b8b4d8.chunk.js",
+    "static/js/2.b8b8b4d8.chunk.js.map": "/Jeep/static/js/2.b8b8b4d8.chunk.js.map",
+    "static/js/3.93ab92a0.chunk.js": "/Jeep/static/js/3.93ab92a0.chunk.js",
+    "static/js/3.93ab92a0.chunk.js.map": "/Jeep/static/js/3.93ab92a0.chunk.js.map",
     "index.html": "/Jeep/index.html",
     "static/css/2.4ce9e501.chunk.css.map": "/Jeep/static/css/2.4ce9e501.chunk.css.map",
-    "static/css/main.5ff0b3b6.chunk.css.map": "/Jeep/static/css/main.5ff0b3b6.chunk.css.map",
-    "static/js/2.146441fa.chunk.js.LICENSE.txt": "/Jeep/static/js/2.146441fa.chunk.js.LICENSE.txt",
+    "static/css/main.1f482af4.chunk.css.map": "/Jeep/static/css/main.1f482af4.chunk.css.map",
+    "static/js/2.b8b8b4d8.chunk.js.LICENSE.txt": "/Jeep/static/js/2.b8b8b4d8.chunk.js.LICENSE.txt",
     "static/media/Banner1.e226ed0c.png": "/Jeep/static/media/Banner1.e226ed0c.png",
     "static/media/Banner2.9cb2ee0e.png": "/Jeep/static/media/Banner2.9cb2ee0e.png",
     "static/media/compass.d573d61b.png": "/Jeep/static/media/compass.d573d61b.png",
@@ -21,13 +21,17 @@
     "static/media/img2.0e0b31ef.png": "/Jeep/static/media/img2.0e0b31ef.png",
     "static/media/img3.31a0ef6c.png": "/Jeep/static/media/img3.31a0ef6c.png",
     "static/media/img4.b3ed25ba.png": "/Jeep/static/media/img4.b3ed25ba.png",
+    "static/media/r_img1.bf3a84b3.jpg": "/Jeep/static/media/r_img1.bf3a84b3.jpg",
+    "static/media/r_img2.791fcf0f.jpg": "/Jeep/static/media/r_img2.791fcf0f.jpg",
+    "static/media/r_img3.685e1704.jpg": "/Jeep/static/media/r_img3.685e1704.jpg",
+    "static/media/r_img4.e32d58df.jpg": "/Jeep/static/media/r_img4.e32d58df.jpg",
     "static/media/renegade.cfba84fe.png": "/Jeep/static/media/renegade.cfba84fe.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.3b092299.js",
+    "static/js/runtime-main.4f12e018.js",
     "static/css/2.4ce9e501.chunk.css",
-    "static/js/2.146441fa.chunk.js",
-    "static/css/main.5ff0b3b6.chunk.css",
-    "static/js/main.56bb41ab.chunk.js"
+    "static/js/2.b8b8b4d8.chunk.js",
+    "static/css/main.1f482af4.chunk.css",
+    "static/js/main.2b63a708.chunk.js"
   ]
 }
