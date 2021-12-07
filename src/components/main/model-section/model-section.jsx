@@ -5,7 +5,7 @@ import "./model-section.css"
 
 const ModelSection = () => {
     return ( 
-        <div className="models section">
+        <div className="models section" id="modelos">
             <h1>MODELOS</h1>
             <CompassModel />
             <RenegadeModel />

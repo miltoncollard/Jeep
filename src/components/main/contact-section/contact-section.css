@@ -19,56 +19,81 @@
     text-align: initial;
 }
 
-.contact__form .name{
+.contact__form .form-username {
     grid-row-start: 1;
     grid-row-end: 1 ;
     grid-column-start: 1;
     grid-column-end: 1;
-    border: 1px black solid;
-    border-radius: 0%;
     margin: 5px 10px 5px 0px;
-    padding: 20px 25px;
 }
-.contact__form .email{
+
+.contact__form .form-username .username{
+   width: 100%;
+   padding: 20px 0;
+   border: 1px black solid;
+   border-radius: 0%;
+}
+
+.contact__form .form-username p,
+.contact__form .form-email p,
+.contact__form .form-telefono p,
+.contact__form .form-message p
+{
+    margin: 0;
+    color: red;
+}
+
+.contact__form .form-email{
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 1;
+    margin: 5px 10px 5px 0px;
+}
+
+.contact__form .form-email .email{
+    width: 100%;
+    padding: 20px 0;
     border: 1px black solid;
     border-radius: 0%;
-    margin: 5px 10px 5px 0px;
-    padding: 20px 25px;
 }
-.contact__form .phone{
+
+.contact__form .form-telefono{
     grid-row-start: 3;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
-    border: 1px black solid;
-    border-radius: 0%;
     margin: 5px 10px 5px 0px;
-    padding: 20px 25px;
 }
 
-.contact__form .phone::-webkit-outer-spin-button,
-.contact__form .phone::-webkit-inner-spin-button{
+.contact__form .form-telefono .telefono{
+    width: 100%;
+    padding: 20px 0;
+    border: 1px black solid;
+    border-radius: 0%;
+}
+.contact__form .form-telefono .telefono::-webkit-outer-spin-button,
+.contact__form .form-telefono .telefono::-webkit-inner-spin-button{
     -webkit-appearance: none;
     margin: 0;
 }
 
-.contact__form .message{
+.contact__form .form-message{
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 2;
-    border: 1px black solid;
-    border-radius: 0%;
-    margin: 5px 0px 5px 10px;
-    padding: 20px 25px;
-    resize: none;
+    margin: 5px 0px 10px 10px;
 }
 
-.contact__form .message::placeholder{
+.contact__form .form-message .message{
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: 1px black solid;
+    border-radius: 0%;
+}
+.contact__form .form-message::placeholder{
     text-align:start;
 }
 .contact__form .btn-send{
@@ -81,31 +106,33 @@
     border: 1px black solid;
     border-radius: 0%;
     margin: 5px 0px 5px 10px;
-    padding: 20px 25px;
+    padding: 13px 20px;
     font-size: 25px;
     font-weight: bold;
 }
 
-@media only screen and (max-width:1200px){
+@media only screen and (max-width:600px){
+
     .contact-section h1{
         font: normal normal bold 50px Helvetica;
     }
 
     .contact__form{
         display: block;
-        width: 100%;
+        width: 90%;
     }
 
-    .contact__form .name,
-    .contact__form .email,
-    .contact__form .phone,
-    .contact__form .message{
+    .contact__form .form-username,
+    .contact__form .form-email,
+    .contact__form .form-telefono,
+    .contact__form .form-message{
+        display: block;
         width: 75%;
-        margin: 5px 5px 5px 0px;
+        margin: 15px auto;
     }
 
-    .contact__form .message{
-        padding-bottom: 50px;
+    .contact__form .form-message .message{
+        padding-bottom: 80px;
     }
 
     .contact__form .btn-send{

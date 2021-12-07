@@ -1,6 +1,7 @@
 .faq-section{
     background: #DEDEDE 0% 0% no-repeat padding-box;
     padding: 50px 0;
+    scroll-margin-top: 100px;
 }
 .faq-section h1{
     font: normal normal bold 73px Helvetica;
@@ -42,7 +43,7 @@
     font-size: 35px;
 }
 
-@media only screen and (max-width:1200px){
+@media only screen and (max-width:601px){
 
     .faq-section h1{
         font: normal normal bold 50px Helvetica;
@@ -69,5 +70,7 @@
     .faq-content ul li{
         margin-bottom: 5px;
         text-align: left;
+        letter-spacing: 0.2px;
+        font: normal normal normal 20px/40px Helvetica;
     }
 }

@@ -1,3 +1,7 @@
+.models{
+    scroll-margin-top: 100px;
+}
+
 .models h1{
     font: normal normal bold 73px Helvetica;
     letter-spacing: 0.61px;

@@ -10,9 +10,9 @@ const Footer = () => {
                     <a href="/jeep"><img src={logo} alt="jeep"/></a>       
                 </div>       
                 <div className="group1-link">
-                    <a href="">Contactanos</a>
-                    <a href="">Preguntas Frecuentes</a>
-                    <a href="">Modelos</a>
+                    <a href="#contact">Contactanos</a>
+                    <a href="#faq">Preguntas Frecuentes</a>
+                    <a href="#modelos">Modelos</a>
                 </div>
             </div>
             <div className="group2">

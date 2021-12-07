@@ -32,4 +32,10 @@ img{
     .carousel-img img{
         width: 200px;
     }
+
+    .carousel .control-dots .dot{
+        width: 10px;
+        height: 10px;
+        border: 2px black solid;
+    }
 }

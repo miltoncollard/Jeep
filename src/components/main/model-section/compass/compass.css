@@ -35,6 +35,8 @@
 .content__images img{
     width: 150px;
     margin: 0 auto;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .content__images .images-1{
@@ -91,10 +93,10 @@
 
     .content__text p{
         width: 85%;
-        font: normal normal normal 20px Helvetica;
+        font: normal normal normal 20px/40px Helvetica;
+        letter-spacing: 0.2px;
         text-align: left;
         margin: 20px auto;
-        letter-spacing: 2px;
     }
 
     .models__content .content__images{

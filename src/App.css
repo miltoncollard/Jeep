@@ -3,7 +3,7 @@
 }
 
 .App {
-  width: 100%;
+  max-width: 1400px;
   text-align: center;
   margin: 0 auto;
 }

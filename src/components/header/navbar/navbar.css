@@ -3,8 +3,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    max-width: 1400px;
     background: white;
-    padding: 20px 0;
     position: fixed;
     text-align: left;
     font: normal normal bold 14px/16px Helvetica;
@@ -14,7 +14,7 @@
 }
 
 .nav .nav__logo{
-    width: 25%;
+    width: 15%;
     margin-left: 50px;
 }
 
@@ -75,6 +75,10 @@
     transition: 0.5s;
 }
 
+.nav__link img{
+    margin-right: 15px;
+}
+
 .mobile-menu{
     display: none;
 }
@@ -86,6 +90,7 @@
         display: block;
         padding-bottom: 0;
         position: absolute;
+        padding: 20px 0;
     }
     .nav .nav__logo{
         margin-left: 20px;

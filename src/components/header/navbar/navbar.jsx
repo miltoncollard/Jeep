@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 const NavBar = () => {
 
-    const [isMobile, setIsMobile] = useState(true);
+    const [isMobile, setIsMobile] = useState(false);
     console.log("isMobile: ", isMobile)
     return ( 
         <nav className="nav container">
@@ -18,7 +18,7 @@ const NavBar = () => {
             </div>
             <div className="nav__menu">
                 <ul 
-                    className={isMobile? "nav__list" : "nav__list__mobile"}
+                    className={isMobile? "nav__list__mobile" : "nav__list" }
                     onClick={() => setIsMobile(false)}
                 >
                     <li className="nav__item">
@@ -40,9 +40,9 @@ const NavBar = () => {
                 onClick={() => setIsMobile(!isMobile)}
             >
                 {isMobile ?(
-                    <i className="fas fa-bars"><FontAwesomeIcon icon={faBars}/></i>
-                    ) : (
                     <i className="fas fa-times"><FontAwesomeIcon icon={faTimes}/></i>
+                    ) : (
+                    <i className="fas fa-bars"><FontAwesomeIcon icon={faBars}/></i>
                     )}
             </button>
         </nav>

@@ -2,7 +2,7 @@
 import "./faq-section.css"
 const FaqSection = () => {
     return ( 
-        <div className="faq-section">
+        <div className="faq-section" id="faq">
             <h1>Preguntas frecuentes</h1>
             <h2>Por las siguientes consultas u otras, no dudes en contactarnos</h2>
             <div className="faq-content">

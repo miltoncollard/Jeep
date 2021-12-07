@@ -14,11 +14,11 @@ const ModelSection = () => {
             <div className="models__content">
                 <div className="content__text"> 
                     <h2>COMPASS AT Sport</h2>
-                    <p>Una nueva interpretación del autentico diseño Jeep. Incorpora motor Tigershark MultiAri,
-                         transmisión manual de 6 velocidades, llantas de aleación de 17'', 
-                         sistemas Uconnect de 7'', táctil con cámara de retroceso, 
-                         Climatizador automático Bi-zona, control de velocidad crucero, 
-                         sensores de estacionamiento trasero y mucho más.
+                    <p>El nuevo Compass es aún más elegante y está diseñado para causar una gran impresión. 
+                       Estrena renovados diseños de paragolpes y parrilla delantera, el badge T270 y llantas 
+                       exteriores. La gran novedad son los nuevos faros delanteros y traseros con tecnología LED
+                       presentes en todas las versiones, que hacen que el nuevo Compass se destaque por fuera
+                       de lo común.
                     </p>
                 </div>
                 <div className="content__images">
