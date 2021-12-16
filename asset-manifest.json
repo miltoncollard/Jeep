@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Jeep/static/css/main.9c344fb0.chunk.css",
+    "main.css": "/Jeep/static/css/main.79cd85c6.chunk.css",
     "main.js": "/Jeep/static/js/main.559d1e47.chunk.js",
     "main.js.map": "/Jeep/static/js/main.559d1e47.chunk.js.map",
     "runtime-main.js": "/Jeep/static/js/runtime-main.5e9583ba.js",
@@ -12,7 +12,7 @@
     "static/js/3.9d70591a.chunk.js.map": "/Jeep/static/js/3.9d70591a.chunk.js.map",
     "index.html": "/Jeep/index.html",
     "static/css/2.4ce9e501.chunk.css.map": "/Jeep/static/css/2.4ce9e501.chunk.css.map",
-    "static/css/main.9c344fb0.chunk.css.map": "/Jeep/static/css/main.9c344fb0.chunk.css.map",
+    "static/css/main.79cd85c6.chunk.css.map": "/Jeep/static/css/main.79cd85c6.chunk.css.map",
     "static/js/2.b22d720c.chunk.js.LICENSE.txt": "/Jeep/static/js/2.b22d720c.chunk.js.LICENSE.txt",
     "static/media/Banner1.e226ed0c.png": "/Jeep/static/media/Banner1.e226ed0c.png",
     "static/media/Banner2.9cb2ee0e.png": "/Jeep/static/media/Banner2.9cb2ee0e.png",
@@ -31,7 +31,7 @@
     "static/js/runtime-main.5e9583ba.js",
     "static/css/2.4ce9e501.chunk.css",
     "static/js/2.b22d720c.chunk.js",
-    "static/css/main.9c344fb0.chunk.css",
+    "static/css/main.79cd85c6.chunk.css",
     "static/js/main.559d1e47.chunk.js"
   ]
 }
