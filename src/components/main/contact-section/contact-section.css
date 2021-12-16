@@ -19,7 +19,7 @@
     text-align: initial;
 }
 
-.contact__form .form-username {
+.contact__form .form-fname {
     grid-row-start: 1;
     grid-row-end: 1 ;
     grid-column-start: 1;
@@ -27,25 +27,32 @@
     margin: 5px 10px 5px 0px;
 }
 
-.contact__form .form-username .username{
+.contact__form .form-fname .fname{
    width: 100%;
    padding: 20px 0;
    border: 1px black solid;
    border-radius: 0%;
 }
 
-.contact__form .form-username p,
-.contact__form .form-email p,
-.contact__form .form-telefono p,
-.contact__form .form-message p
-{
-    margin: 0;
-    color: red;
+.contact__form .form-sname {
+    grid-row-start: 2;
+    grid-row-end: 2 ;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    margin: 5px 10px 5px 0px;
 }
 
+.contact__form .form-sname .sname{
+   width: 100%;
+   padding: 20px 0;
+   border: 1px black solid;
+   border-radius: 0%;
+}
+
+
 .contact__form .form-email{
-    grid-row-start: 2;
-    grid-row-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
     margin: 5px 10px 5px 0px;
@@ -59,8 +66,8 @@
 }
 
 .contact__form .form-telefono{
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 1;
     margin: 5px 10px 5px 0px;
@@ -80,7 +87,7 @@
 
 .contact__form .form-message{
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 2;
     margin: 5px 0px 10px 10px;
@@ -93,12 +100,23 @@
     border: 1px black solid;
     border-radius: 0%;
 }
-.contact__form .form-message::placeholder{
+.contact__form .form-message textarea::placeholder{
     text-align:start;
+    font: normal normal 13px Helvetica;
 }
+
+.contact__form .form-fname input::placeholder,
+.contact__form .form-sname input::placeholder,
+.contact__form .form-email input::placeholder,
+.contact__form .form-telefono input::placeholder{
+   position: relative;
+   left: 5px;
+   font: normal normal 13px Helvetica;
+}
+
 .contact__form .btn-send{
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 2;
     background-color: black;
@@ -122,13 +140,23 @@
         width: 90%;
     }
 
-    .contact__form .form-username,
+    .contact__form .form-fname,
+    .contact__form .form-sname,
     .contact__form .form-email,
     .contact__form .form-telefono,
     .contact__form .form-message{
         display: block;
         width: 75%;
         margin: 15px auto;
+    }
+
+    .contact__form .form-fname input::placeholder,
+    .contact__form .form-sname input::placeholder,
+    .contact__form .form-email input::placeholder,
+    .contact__form .form-telefono input::placeholder{
+        position: relative;
+        left: 5px;
+        font: normal normal 13px Helvetica;
     }
 
     .contact__form .form-message .message{

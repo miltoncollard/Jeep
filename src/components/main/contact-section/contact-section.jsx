@@ -8,7 +8,8 @@ import "./contact-section.css";
 const ContactSection = () => {
 
     const [values, setValues] = useState({
-        username: '',
+        fname: '',
+        sname:'',
         email: '',
         telefono: '',
         message: '',
@@ -44,14 +45,11 @@ const ContactSection = () => {
         e.preventDefault();
         const form = e.target
         setServerState({ submitting: true })
-        const data = new FormData(form)
-        data.append("g-recaptcha-response", token)
         console.log("VALUES: ", values)
-        console.log("DATA: ", data)
-        const params = `&nombre=${values.username}&apellido=${values.username}&telefono=${values.telefono}&celular=${values.telefono}&email=${values.email}&comentarios=${values.message}` ;
+        const params = `&nombre=${values.fname}&apellido=${values.sname}&telefono=${values.telefono}&celular=${values.telefono}&email=${values.email}&comentarios=${values.message}` ;
         axios({
             method: "post",
-            url: `https://api.laikad.com/api/pilot?action=process&recaptcha_response=${token}${params}`,
+            url: `https://api.laikad.com/api/pilot?action=process&recaptcha_response=${token}?${params}`,
             values
           })
             .then(r => {
@@ -69,14 +67,26 @@ const ContactSection = () => {
                 <h1>Contactanos</h1>
                 <GoogleReCaptchaProvider reCaptchaKey="6LegwUwdAAAAAGszA7NUGVV4c64JcvUSHOzhEDpi">
                     <form className="contact__form" id="datos_form" onSubmit={handleSubmit}>
-                        <div className="form-username" id="form-username">
+                        <div className="form-fname" id="form-fname">
                             <input 
-                                name='username' 
+                                name='fname' 
                                 type='text' 
-                                className="username" 
-                                id="username" 
-                                placeholder="* Nombre y Apellido"
-                                value={values.username}
+                                className="fname" 
+                                id="fname" 
+                                placeholder="* Nombre"
+                                value={values.fname}
+                                onChange={handleChange} 
+                                required
+                            />
+                        </div>
+                        <div className="form-sname" id="form-sname">
+                            <input 
+                                name='sname' 
+                                type='text' 
+                                className="sname" 
+                                id="sname" 
+                                placeholder="* Apellido"
+                                value={values.sname}
                                 onChange={handleChange} 
                                 required
                             />
