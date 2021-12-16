@@ -75,6 +75,7 @@
     }
 
     .planSection .text-plan p{
+        font-size: 15px;
         width: 95%;
         margin: 50px auto;
     }
@@ -99,5 +100,6 @@
     .planSection .advantage ul li{
         text-align: left;
         margin-left: 15px;
+        font-size: 15px;
     }
 }
