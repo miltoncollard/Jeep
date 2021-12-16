@@ -6,7 +6,7 @@ import {GoogleReCaptchaProvider, GoogleReCaptcha} from "react-google-recaptcha-v
 import "./contact-section.css";
 
 const ContactSection = () => {
-
+    let flagSend = false
     const [values, setValues] = useState({
         fname: '',
         sname:'',
@@ -42,8 +42,10 @@ const ContactSection = () => {
     };
    
     const handleSubmit = e => {
+        console.log("e: ", e)
         e.preventDefault();
         const form = e.target
+        flagSend =true
         setServerState({ submitting: true })
         console.log("VALUES: ", values)
         const params = `&nombre=${values.fname}&apellido=${values.sname}&telefono=${values.telefono}&celular=${values.telefono}&email=${values.email}&comentarios=${values.message}` ;
@@ -59,7 +61,16 @@ const ContactSection = () => {
                 console.log("error: ", r)
               handleServerResponse(false, r.response.data.error, form)
             })
+        setServerState({ submitting: true })    
+        CleanForm()
+    }
 
+    const CleanForm = () =>{
+        values.fname =''
+        values.sname =''
+        values.email =''
+        values.telefono =''
+        document.getElementById("datos_form").reset();
     }
 
     return ( 
@@ -133,10 +144,11 @@ const ContactSection = () => {
                         />
                         <button 
                             className="btn-send" 
-                            type='submit'>
+                            type='submit'
+                        >
                             Enviar
                         </button>
-
+                        {serverState.submitting ? (<div className="success__message">Su mensaje fue enviado!</div>):("") }
                     </form>      
                 </GoogleReCaptchaProvider>
         </div>
