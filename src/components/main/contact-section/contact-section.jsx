@@ -59,7 +59,7 @@ const ContactSection = () => {
                 console.log("error: ", r)
               handleServerResponse(false, r.response.data.error, form)
             })
-            //saveInfo(values)
+
     }
 
     return ( 
@@ -126,16 +126,17 @@ const ContactSection = () => {
                                 required
                             />
                         </div>
+                        <GoogleReCaptcha
+                            onVerify={(key) => {
+                                setToken(key)
+                            }}
+                        />
                         <button 
                             className="btn-send" 
                             type='submit'>
                             Enviar
                         </button>
-                        <GoogleReCaptcha
-                            onVerify={token => {
-                                setToken(token)
-                            }}
-                        />
+
                     </form>      
                 </GoogleReCaptchaProvider>
         </div>
