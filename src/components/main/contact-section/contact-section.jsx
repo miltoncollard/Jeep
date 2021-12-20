@@ -7,6 +7,7 @@ import "./contact-section.css";
 
 const ContactSection = () => {
     let flagSend = false
+
     const [values, setValues] = useState({
         fname: '',
         sname:'',
@@ -16,20 +17,7 @@ const ContactSection = () => {
     });
 
     const [token, setToken] = useState()
-    const [serverState, setServerState] = useState({
-        submitting: false,
-        status: null
-    })
-
-    const handleServerResponse = (ok, msg, form) => {
-        setServerState({
-          submitting: false,
-          status: { ok, msg }
-        })
-        if (ok) {
-          form.reset()
-        }
-    }
+    const [formStatus, setFormStatus] = useState(false);
 
     //useState para manejo de errores
     const handleChange = e => {
@@ -42,26 +30,35 @@ const ContactSection = () => {
     };
    
     const handleSubmit = e => {
-        console.log("e: ", e)
         e.preventDefault();
-        const form = e.target
-        flagSend =true
-        setServerState({ submitting: true })
-        console.log("VALUES: ", values)
+        const formData = new FormData();
+
+        Object.entries(values).forEach(([key, value]) => {
+        formData.append(key, value);
+        });
+
         const params = `&nombre=${values.fname}&apellido=${values.sname}&telefono=${values.telefono}&celular=${values.telefono}&email=${values.email}&comentarios=${values.message}` ;
+        
         axios({
             method: "post",
-            url: `https://api.laikad.com/api/pilot?action=process&recaptcha_response=${token}?${params}`,
+            url: `https://api.laikad.com/api/pilot?action=process&recaptcha_response=${token}${params}`,
             values
           })
-            .then(r => {
-              handleServerResponse(true, "Thanks!", form)
-            })
-            .catch(r => {
-                console.log("error: ", r)
-              handleServerResponse(false, r.response.data.error, form)
-            })
-        setServerState({ submitting: true })    
+          .then(function (response) {
+            setFormStatus(true);
+            setValues({
+                fname: '',
+                sname:'',
+                email: '',
+                telefono: '',
+                message: '',
+            });
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          }); 
+
         CleanForm()
     }
 
@@ -148,7 +145,7 @@ const ContactSection = () => {
                         >
                             Enviar
                         </button>
-                        {serverState.submitting ? (<div className="success__message">Su mensaje fue enviado!</div>):("") }
+                        {formStatus ? (<div className="success__message">Su mensaje fue enviado!</div>):("") }
                     </form>      
                 </GoogleReCaptchaProvider>
         </div>
