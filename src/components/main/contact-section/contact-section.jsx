@@ -1,12 +1,11 @@
 //imports
-import React, {useState} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import axios from "axios";
-import {GoogleReCaptchaProvider, GoogleReCaptcha} from "react-google-recaptcha-v3"
+import {GoogleReCaptchaProvider, useGoogleReCaptcha} from "react-google-recaptcha-v3"
 //CSS
 import "./contact-section.css";
 
 const ContactSection = () => {
-    let flagSend = false
 
     const [values, setValues] = useState({
         fname: '',
@@ -17,7 +16,25 @@ const ContactSection = () => {
     });
 
     const [token, setToken] = useState()
+    const {executeRecaptcha} = useGoogleReCaptcha(); 
     const [formStatus, setFormStatus] = useState(false);
+
+      // Create an event handler so you can call the verification on button click event or form submit
+    const handleReCaptchaVerify = useCallback(async () => {
+        if (!executeRecaptcha) {
+        console.log('Execute recaptcha not yet available');
+        return;
+        }
+
+        const key = await executeRecaptcha('yourAction');
+        setToken(key)
+        // Do whatever you want with the token
+    }, [executeRecaptcha]);
+
+    // You can use useEffect to trigger the verification as soon as the component being loaded
+    useEffect(() => {
+        handleReCaptchaVerify();
+    }, [handleReCaptchaVerify]);
 
     //useState para manejo de errores
     const handleChange = e => {
@@ -31,11 +48,6 @@ const ContactSection = () => {
    
     const handleSubmit = e => {
         e.preventDefault();
-        const formData = new FormData();
-
-        Object.entries(values).forEach(([key, value]) => {
-        formData.append(key, value);
-        });
 
         const params = `&nombre=${values.fname}&apellido=${values.sname}&telefono=${values.telefono}&celular=${values.telefono}&email=${values.email}&comentarios=${values.message}` ;
         
@@ -134,14 +146,10 @@ const ContactSection = () => {
                                 required
                             />
                         </div>
-                        <GoogleReCaptcha
-                            onVerify={(key) => {
-                                setToken(key)
-                            }}
-                        />
                         <button 
                             className="btn-send" 
                             type='submit'
+                            onClick={handleReCaptchaVerify}
                         >
                             Enviar
                         </button>
