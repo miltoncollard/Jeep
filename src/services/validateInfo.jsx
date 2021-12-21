@@ -2,8 +2,6 @@ export default function validateInfo(values){
 
     let errors = {};
 
-    console.log("VALUES: ",values)
-
     if(!values.username.trim()){
         errors.username = 'Nombre y Apellido vacios';
     }else if(!/^[a-zA-Z_ ]+$/i.test(values.username)){

@@ -10,7 +10,6 @@ import { useState } from 'react';
 const NavBar = () => {
 
     const [isMobile, setIsMobile] = useState(false);
-    console.log("isMobile: ", isMobile)
     return ( 
         <nav className="nav container">
             <div className="nav__logo">
