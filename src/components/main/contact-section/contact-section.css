@@ -135,6 +135,10 @@
     border-radius: 5%;
 }
 
+.MuiSnackbarContent-root{
+    color: black !important;
+    background-color: rgb(122, 252, 191) !important;
+}
 @media only screen and (max-width:600px){
 
     .contact-section h1{

@@ -1,11 +1,15 @@
 //imports
 import React, {useState, useEffect, useCallback} from "react";
 import axios from "axios";
-import {GoogleReCaptchaProvider, useGoogleReCaptcha} from "react-google-recaptcha-v3"
+import {useGoogleReCaptcha} from "react-google-recaptcha-v3";
+import Button from '@material-ui/core/Button';
+import Snackbar from '@material-ui/core/Snackbar';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
 //CSS
 import "./contact-section.css";
 
-const ContactSection = () => {
+const ContactSection = () => { 
 
     const [values, setValues] = useState({
         fname: '',
@@ -25,10 +29,8 @@ const ContactSection = () => {
         console.log('Execute recaptcha not yet available');
         return;
         }
-
-        const key = await executeRecaptcha('yourAction');
-        setToken(key)
-        // Do whatever you want with the token
+        const key = await executeRecaptcha();
+        setToken(key);
     }, [executeRecaptcha]);
 
     // You can use useEffect to trigger the verification as soon as the component being loaded
@@ -82,80 +84,99 @@ const ContactSection = () => {
         document.getElementById("datos_form").reset();
     }
 
+    const handleClose = (event, reason) =>{
+        if(reason === 'clickaway'){
+            return
+        }
+
+        setFormStatus(false)
+    }
+
     return ( 
         <div className="contact-section" id="contact">
-                <h1>Contactanos</h1>
-                <GoogleReCaptchaProvider reCaptchaKey="6LegwUwdAAAAAGszA7NUGVV4c64JcvUSHOzhEDpi">
-                    <form className="contact__form" id="datos_form" onSubmit={handleSubmit}>
-                        <div className="form-fname" id="form-fname">
-                            <input 
-                                name='fname' 
-                                type='text' 
-                                className="fname" 
-                                id="fname" 
-                                placeholder="* Nombre"
-                                value={values.fname}
-                                onChange={handleChange} 
-                                required
-                            />
-                        </div>
-                        <div className="form-sname" id="form-sname">
-                            <input 
-                                name='sname' 
-                                type='text' 
-                                className="sname" 
-                                id="sname" 
-                                placeholder="* Apellido"
-                                value={values.sname}
-                                onChange={handleChange} 
-                                required
-                            />
-                        </div>
-                        <div className="form-email" id="form-email">
-                            <input 
-                                name="email" 
-                                type="email" 
-                                className="email" 
-                                id="email" 
-                                placeholder="* Email"
-                                value={values.email}
-                                onChange={handleChange} 
-                                required
-                            />
-                        </div>
-                        <div className="form-telefono" id="form-telefono">
-                            <input 
-                                name="telefono" 
-                                type="number" 
-                                className="telefono" 
-                                id="telefono" 
-                                placeholder="* Teléfono"
-                                value={values.telefono}
-                                onChange={handleChange} 
-                                required
-                            />
-                        </div>
-                        <div className="form-message">
-                            <textarea 
-                                name="message" 
-                                type="text" 
-                                className="message" 
-                                id="message" 
-                                placeholder="* Mensaje" 
-                                onChange={handleChange} 
-                                required
-                            />
-                        </div>
-                        <button 
-                            className="btn-send" 
-                            type='submit'
-                            onClick={handleReCaptchaVerify}
-                        >
-                            Enviar
-                        </button>
-                        {formStatus ? (<div className="success__message">Su mensaje fue enviado!</div>):("") }
-                    </form>      
-                </GoogleReCaptchaProvider>
+            <h1>Contactanos</h1>
+                <form className="contact__form" id="datos_form" onSubmit={handleSubmit}>
+                    <div className="form-fname" id="form-fname">
+                        <input 
+                            name='fname' 
+                            type='text' 
+                            className="fname" 
+                            id="fname" 
+                            placeholder="* Nombre"
+                            value={values.fname}
+                            onChange={handleChange} 
+                            required
+                        />
+                    </div>
+                    <div className="form-sname" id="form-sname">
+                        <input 
+                            name='sname' 
+                            type='text' 
+                            className="sname" 
+                            id="sname" 
+                            placeholder="* Apellido"
+                            value={values.sname}
+                            onChange={handleChange} 
+                            required
+                        />
+                    </div>
+                    <div className="form-email" id="form-email">
+                        <input 
+                            name="email" 
+                            type="email" 
+                            className="email" 
+                            id="email" 
+                            placeholder="* Email"
+                            value={values.email}
+                            onChange={handleChange} 
+                            required
+                        />
+                    </div>
+                    <div className="form-telefono" id="form-telefono">
+                        <input 
+                            name="telefono" 
+                            type="number" 
+                            className="telefono" 
+                            id="telefono" 
+                            placeholder="* Teléfono"
+                            value={values.telefono}
+                            onChange={handleChange} 
+                            required
+                        />
+                    </div>
+                    <div className="form-message">
+                        <textarea 
+                            name="message" 
+                            type="text" 
+                            className="message" 
+                            id="message" 
+                            placeholder="* Mensaje" 
+                            onChange={handleChange} 
+                            required
+                        />
+                    </div>
+                    <button 
+                        className="btn-send" 
+                        type='submit'
+                        onClick={handleReCaptchaVerify}
+                    >
+                        Enviar
+                    </button>
+                    
+                    <Snackbar
+                    open={formStatus} 
+                    autoHideDuration={4000} 
+                    onClose={handleClose} 
+                    message='Se mensaje ha sido enviado!'
+                    action={
+                        <React.Fragment>
+                            <IconButton onClick={handleClose}></IconButton>
+                        </React.Fragment>
+                     }
+                    >
+
+                    </Snackbar>
+                </form>      
         </div>
     );
 } 

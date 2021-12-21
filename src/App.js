@@ -1,4 +1,5 @@
 import React from 'react';
+import {GoogleReCaptchaProvider} from "react-google-recaptcha-v3";
 import './App.css';
 //components
 import NavBar from './components/header/navbar/navbar';
@@ -12,13 +13,15 @@ import Footer from  './components/footer/footer';
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <BannerCarousel/> 
-      <ModelSection/>
-      <PlanSection/>
-      <FaqSection/>
-      <ContactSection/> 
-      <Footer/>  
+      <GoogleReCaptchaProvider reCaptchaKey="6LegwUwdAAAAAGszA7NUGVV4c64JcvUSHOzhEDpi">
+        <NavBar/>
+        <BannerCarousel/> 
+        <ModelSection/>
+        <PlanSection/>
+        <FaqSection/>
+        <ContactSection/> 
+        <Footer/>  
+      </GoogleReCaptchaProvider>
     </div>
   );
 }
